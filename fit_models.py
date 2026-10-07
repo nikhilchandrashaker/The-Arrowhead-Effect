@@ -38,27 +38,43 @@ EXPO_INT = EXPO + ["crowd_fill:intensity_z", "crowd_fill:intensity_z:visitor_off
 
 MODELS = {
     # name: (outcome, family, extra RHS, filter)
-    "M01_false_start":   ("false_start", "logit", "", "scrimmage"),
-    "M02_delay_of_game": ("delay_of_game", "logit", "", "scrimmage"),
-    "M03_epa":           ("epa", "ols", "", "scrimmage"),
+    "M01_false_start":   ("false_start", "logit", "", "snap"),
+    "M02_delay_of_game": ("delay_of_game", "logit", "", "snap"),
+    "M03_epa":           ("epa", "ols", "", "snap"),
     "M04_third_down":    ("conversion", "logit", "", "third"),
-    "M05_off_penalty":   ("offensive_penalty", "logit", "", "scrimmage"),
+    "M05_off_penalty":   ("offensive_penalty", "logit", "", "snap"),
+    "M05b_other_off_pen": ("other_off_penalty", "logit", "", "snap"),
+    "M06_epa_nonpen":    ("epa", "ols", "", "nonpen"),   # execution effect net of penalties (feeds simulator)
 }
 
 
 def prep(plays, exposure):
     d = plays.merge(exposure[["game_id", "crowd_fill", "intensity_z"]], on="game_id", how="inner")
     d = d.dropna(subset=["crowd_fill", "down", "ydstogo", "yardline_100", "posteam"])
+    for c in ["false_start", "delay_of_game", "offensive_penalty", "defensive_penalty", "penalty", "timeout"]:
+        d[c] = d[c].fillna(0)
+    d["other_off_penalty"] = (d["offensive_penalty"] - d["false_start"] - d["delay_of_game"]).clip(lower=0)
     d["conversion"] = ((d["first_down"].fillna(0) == 1) | (d["touchdown"].fillna(0) == 1)).astype(int)
     return d
 
 
 def subset(d, kind, regular_only=True):
+    """
+    snap   : every offensive snap attempt, INCLUDING 'no_play' rows (false starts / delay of game
+             are no_play in nflverse). Excludes timeouts and non-snap rows (down is NaN).
+    third  : 3rd-down pass/run attempts (replayed no_plays are not attempts).
+    nonpen : pass/run with no penalty, so execution is not mixed with penalty yardage.
+    """
     if regular_only:
         d = d[d["game_type"] == "REG"]
+    d = d[d["down"].notna() & (d["timeout"] != 1)]
+    if kind == "snap":
+        return d[d["play_type"].isin(["pass", "run", "no_play"])]
     d = d[d["play_type"].isin(["pass", "run"])]
     if kind == "third":
         d = d[d["down"] == 3]
+    elif kind == "nonpen":
+        d = d[d["penalty"] == 0]
     return d
 
 
@@ -122,7 +138,7 @@ def run(plays, exposure, outdir, ndraws=5000, seed=42):
             pg = pl[["game_id"]].drop_duplicates()
             pg["fake_fill"] = rng.choice(base, len(pg))
             pl = pl.merge(pg, on="game_id"); pl["crowd_fill"] = pl["fake_fill"]
-            for name in ["M01_false_start", "M03_epa"]:
+            for name in ["M01_false_start", "M06_epa_nonpen"]:
                 y, fam, extra, kind = MODELS[name]
                 r = fit(subset(pl, kind), y, fam, EXPO, extra)
                 for k in expo_summary(r, EXPO):
@@ -130,7 +146,7 @@ def run(plays, exposure, outdir, ndraws=5000, seed=42):
                                     "term": k, "coef": r.params[k], "se": r.bse[k]})
 
     # ---- placebo 2: outcome that crowd noise should NOT drive (defensive penalties) ----
-    d = subset(d0, "scrimmage")
+    d = subset(d0, "snap")
     r = fit(d, "defensive_penalty", "logit", EXPO)
     for k in expo_summary(r, EXPO):
         placebo.append({"test": "placebo_outcome_defensive_penalty", "model": "defensive_penalty",

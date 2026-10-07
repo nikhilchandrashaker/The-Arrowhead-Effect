@@ -28,7 +28,8 @@ KEEP = [
 "yards_gained","air_yards","yards_after_catch","first_down","touchdown",
 "interception","fumble","fumble_lost","penalty","penalty_team","penalty_type",
 "penalty_yards","timeout","third_down","fourth_down","two_point_conv",
-"epa","wpa","cpoe","success","desc"
+"epa","wpa","cpoe","success","desc",
+"home_score","away_score","field_goal_result","kick_distance","return_yards","punt_blocked"
 ]
 
 def load_year(year):
