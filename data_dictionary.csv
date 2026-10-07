@@ -1,0 +1,11 @@
+field,type,definition,provenance
+false_start,binary,1 if play description indicates a false start,derived
+delay_of_game,binary,1 if play description indicates delay of game,derived
+offensive_penalty,binary,Penalty charged to possession offense,derived
+epa,numeric,Expected points added from nflfastR,source
+wpa,numeric,Win probability added from nflfastR,source
+noise_index_observed,numeric,Normalized observed exposure when defensible measurement exists; otherwise missing,modeled
+noise_index_counterfactual,numeric,Counterfactual exposure; 1.0 = Arrowhead-equivalent target,modeled
+high_leverage,binary,Indicator for large absolute WPA play,derived
+late_clock,binary,Game-clock pressure indicator,derived
+visitor_offense,binary,1 when possession offense is away team,derived

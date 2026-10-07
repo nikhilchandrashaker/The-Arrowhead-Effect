@@ -1,0 +1,2 @@
+event_id,game_date,season,week,home_team,away_team,stadium,noise_dba_peak,noise_time_context,final_home_score,final_away_score,record_status,model_role
+NE004,2014-09-29,2014,4,KC,NE,Arrowhead Stadium,142.2,8 seconds remaining in Q1,41,14,Guinness World Record,"counterfactual anchor, not continuous game-average noise"

@@ -1,0 +1,16 @@
+slide,title,subtitle,purpose
+01,THE ARROWHEAD EFFECT,What if every NFL stadium were as loud as Arrowhead?,Hook
+02,142.2 dBA,"September 29, 2014 — the official record-setting roar",Historical anchor
+03,THE PROBLEM,"142.2 dBA was a peak event, not a game-long average",Measurement
+04,THE QUESTION,Can crowd pressure measurably change football outcomes?,Research question
+05,THE DATA,2014–2026 NFL play-by-play + game state + stadium context,Data
+06,THE MECHANISM,Noise → communication → penalties → EPA → points → wins,Theory
+07,THE MODEL,Hierarchical play-level models with nonlinear exposure effects,Methods
+08,NOISE RESILIENCE,Which QBs and offenses handle crowd pressure best?,Player/team
+09,THE COUNTERFACTUAL,Every stadium receives Arrowhead-equivalent crowd pressure,Simulation
+10,"10,000 SEASONS",We simulate the NFL repeatedly rather than inventing one alternate season,Simulation
+11,THE NEW NFL,"Alternate wins, divisions, playoff seeds, and Super Bowl probabilities",Results
+12,WHO BENEFITS?,Teams with the largest and smallest simulated changes,Results
+13,ROBUSTNESS,Conservative / central / aggressive specifications,Credibility
+14,LIMITATIONS,What the model can and cannot claim,Scientific honesty
+15,THE TAKEAWAY,How much is a crowd actually worth?,Conclusion

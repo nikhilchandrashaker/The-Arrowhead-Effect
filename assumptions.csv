@@ -1,0 +1,9 @@
+id,assumption,status,implementation
+A01,"142.2 dBA is a peak crowd-roar measurement, not a game average.",Required,Do not equate it to 142.2 dBA every play.
+A02,Observed noise measurements are sparse.,Required,Use documented measurements only as calibration/anchors.
+A03,Noise effects may be nonlinear.,Required,Estimate spline/threshold forms and test linearity.
+A04,Home team and visitor team may respond differently.,Required,Estimate separate exposure effects or interactions.
+A05,Noise is correlated with game excitement.,Required,Control for game state and use within-team/stadium structure; discuss residual confounding.
+A06,The record-setting event cannot identify a continuous causal effect by itself.,Required,Use broader historical variation and sensitivity analysis.
+A07,"Counterfactual target is 'Arrowhead-equivalent crowd pressure,' not literal continuous 142.2 dBA.",Required,Use a normalized exposure index.
+A08,2026 season is incomplete.,Required,Freeze the analysis at the specified data-extraction date.

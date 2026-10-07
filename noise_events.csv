@@ -1,0 +1,5 @@
+event_id,date,season,week,away_team,home_team,stadium,dba,measurement_type,source,role
+NE001,2013-09-15,2013,2,SF,SEA,Lumen Field,136.6,peak,Guinness,pre-study historical calibration
+NE002,2013-10-13,2013,6,OAK,KC,Arrowhead Stadium,137.5,peak,Guinness/NFL,pre-study historical calibration
+NE003,2013-12-02,2013,13,NO,SEA,Lumen Field,137.6,peak,Guinness,pre-study historical calibration
+NE004,2014-09-29,2014,4,NE,KC,Arrowhead Stadium,142.2,peak,Guinness,primary counterfactual anchor

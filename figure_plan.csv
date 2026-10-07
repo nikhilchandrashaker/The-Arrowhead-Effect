@@ -1,0 +1,14 @@
+figure_id,title,level,description,category
+F01,The Record,2013–2014,Timeline of 136.6 → 137.5 → 137.6 → 142.2 dBA,historical
+F02,Why Peak dBA Is Not Average dBA,Method,Peak-vs-distributed measurement conceptual diagram,methods
+F03,False-Start Probability,Play,Predicted probability vs normalized noise exposure with 95% CI,main_result
+F04,EPA Response Curve,Play,EPA/play vs noise exposure with nonlinear fit and uncertainty,main_result
+F05,Mechanism Waterfall,League,Noise → errors → EPA → points → win probability,main_result
+F06,QB Noise Resilience,QB,Ranked estimated penalty/EPA sensitivity with uncertainty,player
+F07,Team Noise Resilience,Team,Home/away performance sensitivity,team
+F08,Arrowhead Effect by Situation,Play,"Third down, red zone, late clock, no-huddle, shotgun",mechanism
+F09,Alternate Standings,Season,Observed vs simulated wins,simulation
+F10,Playoff Bracket,Season,Observed vs counterfactual playoff field,simulation
+F11,"10,000-Season Win Distributions",Season,Distribution of wins by team,simulation
+F12,Sensitivity / Robustness,Model,Conservative vs central vs aggressive scenarios,robustness
+F13,Stadium Map,Venue,Documented noise evidence only; missingness shown explicitly,context

@@ -1,0 +1,7 @@
+source_id,publisher,title,url,role
+S01,Guinness World Records,Arrowhead 142.2 dBA record,https://www.guinnessworldrecords.com/world-records/loudest-crowd-roar-at-a-sports-stadium,Primary historical anchor
+S02,nflverse,NFL play-by-play releases,https://github.com/nflverse/nflverse-data/releases,Primary football data
+S03,nflfastR,Data fields and modeling documentation,https://github.com/nflverse/nflfastR,Field definitions / EPA / WPA
+S04,Guinness World Records,Seattle 136.6 dBA record,https://www.guinnessworldrecords.com/news/2013/9/seattle-seahawks-break-record-for-loudest-stadium-crowd-roar-51331,Historical calibration
+S05,NFL.com,Arrowhead 137.5 dBA 2013 record,https://www.nfl.com/news/kansas-city-chiefs-fans-set-loudest-stadium-record-at-arrowhead-0ap2000000261582,Historical calibration
+S06,Research preprint,Cross-venue acoustic measurement methodology,https://arxiv.org/abs/2607.18922,Measurement limitations/method

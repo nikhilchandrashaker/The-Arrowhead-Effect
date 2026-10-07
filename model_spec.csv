@@ -1,0 +1,7 @@
+model_id,purpose,method,formula,role
+M01,False-start model,Binomial/logistic mixed model,false_start ~ noise_exposure + down + distance + clock + score + team + QB + stadium + game_type,Primary mechanism
+M02,Delay-of-game model,Binomial/logistic mixed model,delay_of_game ~ noise_exposure + clock + play_clock_context + team + QB + stadium,Communication/time-pressure outcome
+M03,Offensive EPA model,Hierarchical regression/GAM,epa ~ noise_exposure + down + distance + field_position + score + team + opponent + QB + shotgun + no_huddle + game_state,Performance outcome
+M04,Third-down model,Binomial/logistic mixed model,conversion ~ noise_exposure + distance + score + clock + team + QB + stadium,High-leverage communication
+M05,Drive model,Hierarchical regression,drive_epa/drive_success ~ aggregate_noise_exposure + starting_field_position + opponent + team,Drive-level consequence
+M06,Win model,"Simulation, not direct causal regression",game outcomes generated from play/drive counterfactuals,Final counterfactual

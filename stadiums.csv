@@ -1,0 +1,29 @@
+stadium,team,city,state,roof_type,measured_game_average_dba,measured_peak_dba,counterfactual_anchor_dba,measurement_warning
+Arrowhead Stadium,KC,Kansas City,MO,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Lumen Field,SEA,Seattle,WA,open_partial_roof,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Highmark Stadium,BUF,Orchard Park,NY,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Acrisure Stadium,PIT,Pittsburgh,PA,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+M&T Bank Stadium,BAL,Baltimore,MD,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Lincoln Financial Field,PHI,Philadelphia,PA,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Lambeau Field,GB,Green Bay,WI,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Empower Field at Mile High,DEN,Denver,CO,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Paycor Stadium,CIN,Cincinnati,OH,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Cleveland Browns Stadium,CLE,Cleveland,OH,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Nissan Stadium,TEN,Nashville,TN,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Soldier Field,CHI,Chicago,IL,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+MetLife Stadium,NYG/NYJ,East Rutherford,NJ,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Gillette Stadium,NE,Foxborough,MA,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Bank of America Stadium,CAR,Charlotte,NC,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Raymond James Stadium,TB,Tampa,FL,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Caesars Superdome,NO,New Orleans,LA,dome,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Ford Field,DET,Detroit,MI,dome,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+U.S. Bank Stadium,MIN,Minneapolis,MN,dome,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+AT&T Stadium,DAL,Arlington,TX,retractable,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+State Farm Stadium,ARI,Glendale,AZ,retractable,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+NRG Stadium,HOU,Houston,TX,retractable,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Lucas Oil Stadium,IND,Indianapolis,IN,retractable,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Mercedes-Benz Stadium,ATL,Atlanta,GA,retractable,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+SoFi Stadium,LAR/LAC,Inglewood,CA,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Allegiant Stadium,LV,Las Vegas,NV,dome,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+TIAA Bank Field,JAX,Jacksonville,FL,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
+Levi's Stadium,SF,Santa Clara,CA,open,,,142.2,142.2 is a peak historical roar; do not interpret as continuous stadium level.
